@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/ilon-test/static/css/main.493e0bf5.css",
+    "main.js": "/ilon-test/static/js/main.c504734c.js",
+    "static/js/787.8cc8cc05.chunk.js": "/ilon-test/static/js/787.8cc8cc05.chunk.js",
+    "static/media/bg.jpg": "/ilon-test/static/media/bg.825f5663efa38d81ab2c.jpg",
+    "index.html": "/ilon-test/index.html",
+    "main.493e0bf5.css.map": "/ilon-test/static/css/main.493e0bf5.css.map",
+    "main.c504734c.js.map": "/ilon-test/static/js/main.c504734c.js.map",
+    "787.8cc8cc05.chunk.js.map": "/ilon-test/static/js/787.8cc8cc05.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.493e0bf5.css",
+    "static/js/main.c504734c.js"
+  ]
+}
