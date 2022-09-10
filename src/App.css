@@ -1,38 +1,266 @@
-.App {
-  text-align: center;
+@import url('http://fonts.cdnfonts.com/css/museo-sans-cyrl');
+
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  overflow-x: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  font-family: "Museo Sans Cyrl", sans-serif;
+  font-weight: 300;
+  background-image: url(./img/bg.jpg);
+  /* background-attachment: fixed; */
+  background-position: top center;
+  background-repeat: no-repeat;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h1 {
+  margin: 5px 0 5px 0;
+  font-size: 58px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  background: linear-gradient(-90deg, #ff3f04, #fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-mask: radial-gradient(circle at 160% 200%, transparent 300px, #fff 300px);
+
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  height: 100vh;
+}
+
+.container {
+  width: 1170px;
+  margin: 0 auto;
+  position: relative;
+}
+
+nav {
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+
+}
+
+.logo {
+  height: 100px;
+  width: 316px;
+  background-image: url(./img/corner.png);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav__list {}
+
+.nav__item {
+  display: inline-block;
+  margin-left: 35px;
+  font-size: 16px;
+}
+
+.nav__link {
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav__link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1px;
+  background-color: #fff;
+  position: absolute;
+  bottom: -7px;
+  transition: 0.3s;
+}
+
+.nav__link:hover::after {
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  padding-top: 35px;
+}
+
+.header__text {
+  padding-top: 65px;
+}
+
+.header__title {
+  padding-top: 21px;
+  line-height: 28px;
+}
+
+.header__title span {
+  font-size: 25px;
+  font-weight: normal;
+  text-transform: lowercase;
+  letter-spacing: -0.5px;
+}
+
+.header__btn {
+  margin-top: 80px;
+  background-color: transparent;
+  padding: 10px 25px;
+  color: #fff;
+  border: 2px solid transparent;
+  border-image: linear-gradient(to right top, #263e66 10%, #09213d 30%, #111f2d 70%, #23599c 90%);
+  border-image-slice: 1;
+  position: relative;
+  transition: 0.3s;
+}
+
+.header__btn:hover {
+  border: 2px solid white;
+}
+
+.header__btn::before,
+.header__btn::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 5px;
+  height: 5px;
+}
+
+.header__btn::before {
+  bottom: -2px;
+  left: -2px;
+  border-bottom: 2px solid #fff;
+  border-left: 2px solid #fff;
+}
+
+.header__btn::after {
+  top: -2px;
+  right: -2px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+}
+
+.header__btn__arrow {
+  position: relative;
+}
+
+.header__btn__arrow img {
+  position: absolute;
+  bottom: -38px;
+
+}
+
+.header__info {
+  margin-right: -39px;
+}
+
+.header__cards {
+  display: grid;
+  grid-template-rows: repeat(2, 190px);
+  grid-template-columns: repeat(2, 190px);
+  grid-gap: 5px;
+}
+
+.header__card {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  /* transition: 0.3s;/ */
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.header__card:nth-child(4n+1) {
+  border-right: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  background: linear-gradient(to right bottom, transparent 50%, rgba(255, 255, 255, 0.05));
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header__card:nth-child(4n+2) {
+  border-left: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  background: linear-gradient(to left bottom, transparent 50%, rgba(255, 255, 255, 0.05));
+}
+
+.header__card:nth-child(4n+3) {
+  border-right: 2px solid transparent;
+  border-top: 2px solid transparent;
+  background: linear-gradient(to right top, transparent 50%, rgba(255, 255, 255, 0.05));
+}
+
+.header__card:nth-child(4n) {
+  border-left: 2px solid transparent;
+  border-top: 2px solid transparent;
+  background: linear-gradient(to left top, transparent 50%, rgba(255, 255, 255, 0.05));
+}
+
+.header__card:nth-child(4n+1):hover {
+  border-right: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  border-image: linear-gradient(to right bottom, transparent 50%, rgba(255, 255, 255, 0.5));
+  border-image-slice: 1;
+  background: linear-gradient(to right bottom, transparent 50%, rgba(255, 255, 255, 0.1));
+}
+
+.header__card:nth-child(4n+2):hover {
+  border-left: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  border-image: linear-gradient(to left bottom, transparent 50%, rgba(255, 255, 255, 0.5));
+  border-image-slice: 1;
+  background: linear-gradient(to left bottom, transparent 50%, rgba(255, 255, 255, 0.1));
+}
+
+.header__card:nth-child(4n+3):hover {
+  border-right: 2px solid transparent;
+  border-top: 2px solid transparent;
+  border-image: linear-gradient(to right top, transparent 50%, rgba(255, 255, 255, 0.5));
+  border-image-slice: 1;
+  background: linear-gradient(to right top, transparent 50%, rgba(255, 255, 255, 0.1));
+}
+
+.header__card:nth-child(4n):hover {
+  border-left: 2px solid transparent;
+  border-top: 2px solid transparent;
+  border-image: linear-gradient(to left top, transparent 50%, rgba(255, 255, 255, 0.5));
+  border-image-slice: 1;
+  background: linear-gradient(to left top, transparent 50%, rgba(255, 255, 255, 0.1));
+}
+
+.header__card h3 {
+  font-size: 18px;
+  font-weight: 100;
+}
+
+.header__card h3 span {
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: -10px;
+  font-size: 60px;
+  font-weight: 600;
+}
+
+.header__card h3 small {
+  font-size: 18px;
+  font-weight: 600;
 }
